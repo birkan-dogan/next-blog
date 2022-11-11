@@ -1,12 +1,7 @@
+import PostContent from "../../components/posts/post-detail/post-content";
+
 const PostDetailPage = () => {
-  return (
-    <div>
-      <h1>
-        url will be localhost:3000/getting-started-with-nextjs and the page will
-        displayed
-      </h1>
-    </div>
-  );
+  return <PostContent />;
 };
 
 export default PostDetailPage;
