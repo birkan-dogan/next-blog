@@ -1,9 +1,42 @@
+import AllPosts from "../../components/posts/all-posts";
+
+const DUMMY_POSTS = [
+  {
+    slug: "getting-started-with-nextjs",
+    title: "Getting Started with NextJS",
+    image: "getting-started-nextjs.png",
+    excerpt:
+      "NextJS is a React framework for production - it makes building fullstack React apps and sites a breeze and ships with built-in SSR",
+    date: "2022-08-11",
+  },
+  {
+    slug: "getting-started-with-nextjs",
+    title: "Getting Started with NextJS",
+    image: "getting-started-nextjs.png",
+    excerpt:
+      "NextJS is a React framework for production - it makes building fullstack React apps and sites a breeze and ships with built-in SSR",
+    date: "2022-08-11",
+  },
+  {
+    slug: "getting-started-with-nextjs",
+    title: "Getting Started with NextJS",
+    image: "getting-started-nextjs.png",
+    excerpt:
+      "NextJS is a React framework for production - it makes building fullstack React apps and sites a breeze and ships with built-in SSR",
+    date: "2022-08-11",
+  },
+  {
+    slug: "getting-started-with-nextjs",
+    title: "Getting Started with NextJS",
+    image: "getting-started-nextjs.png",
+    excerpt:
+      "NextJS is a React framework for production - it makes building fullstack React apps and sites a breeze and ships with built-in SSR",
+    date: "2022-08-11",
+  },
+];
+
 const AllPostsPage = () => {
-  return (
-    <div>
-      <h1>url will be localhost:3000//posts and this page will be displayed</h1>
-    </div>
-  );
+  return <AllPosts posts={DUMMY_POSTS} />;
 };
 
 export default AllPostsPage;
