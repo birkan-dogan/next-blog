@@ -5,6 +5,9 @@ import ReactMarkdown from "react-markdown";
 
 import Image from "next/image";
 
+import { Prism } from "react-syntax-highlighter";
+import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+
 const PostContent = ({ post }) => {
   const imagePath = `/images/posts/${post.slug}/${post.image}`;
 
@@ -27,12 +30,18 @@ const PostContent = ({ post }) => {
       }
       return <p>{paragraph.children}</p>;
     },
+
+    code(code) {
+      const { className, children } = code;
+      const language = className.split("-")[1];
+      return <Prism language={language} children={children} style={atomDark} />;
+    },
   };
 
   return (
     <article className={classes.content}>
       <PostHeader image={imagePath} title={post.title} />
-      <ReactMarkdown renderers={customRenderers}>{post.content}</ReactMarkdown>
+      <ReactMarkdown components={customRenderers}>{post.content}</ReactMarkdown>
     </article>
   );
 };
